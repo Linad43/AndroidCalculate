@@ -3,6 +3,7 @@ package com.example.androidcalculator
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private var flagReset = false
     private var op = 0
     private var listInput = mutableListOf<String>()
+    private lateinit var button: Button
 
     private lateinit var input: EditText
     private lateinit var result: TextView
@@ -37,9 +39,10 @@ class MainActivity : AppCompatActivity() {
 
         input = findViewById(R.id.inputET)
         result = findViewById(R.id.resultTV)
+        button = findViewById(R.id.button)
+        button.setOnClickListener {  }
 
     }
-
 
     fun click_1(view: View) {
         if (flagReset) reset(view)
